@@ -1,0 +1,815 @@
+INFO    2022-11-02 22:25:33,236 [main] main.MODEL.Pacientes  - El ID del Paciente  santosfue creado con exito
+INFO    2022-11-02 22:25:33,545 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-02 22:26:34,333 [main] main.MODEL.Pacientes  - El ID del Paciente  santosfue creado con exito
+INFO    2022-11-02 22:26:34,610 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-02 22:28:06,370 [main] main.MODEL.Pacientes  - El ID del Paciente  santoskerlyfue creado con exito
+INFO    2022-11-02 22:28:06,683 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-02 22:28:39,823 [main] main.MODEL.Pacientes  - El ID del Paciente  santoskerlyfue creado con exito
+INFO    2022-11-02 22:28:40,100 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-02 22:29:08,738 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 22:29:09,027 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-02 22:42:36,015 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 22:42:36,016 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 22:42:36,179 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 22:42:36,181 [main] main.DAO.imple.IDaoPacientesimplH2  - Error paciente crear tabla
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:42:36,181 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:42:36,197 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:77)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 22:42:36,198 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 22:42:36,198 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:95)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 22:44:58,083 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 22:44:58,085 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 22:44:58,280 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 22:44:58,282 [main] main.DAO.imple.IDaoPacientesimplH2  - Error paciente crear tabla
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:44:58,282 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:44:58,298 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:77)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 22:44:58,298 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 22:44:58,299 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:95)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 22:47:47,324 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 22:47:47,326 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 22:47:47,499 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 22:47:47,501 [main] main.DAO.imple.IDaoPacientesimplH2  - Error paciente crear tabla
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:47:47,501 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 22:47:47,514 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:77)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 22:47:47,515 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 22:47:47,515 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:95)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:02:40,234 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:02:40,235 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 23:02:40,417 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 23:02:40,419 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:02:40,419 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:02:40,432 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 23:02:40,433 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:79)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 23:02:40,433 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:96)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:03:30,153 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:03:30,154 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 23:03:30,318 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 23:03:30,320 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:03:30,321 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:03:30,338 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 23:03:30,339 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:79)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 23:03:30,339 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:96)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:07:24,159 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:07:24,161 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-02 23:07:24,491 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas de la clinicaOdontologica
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PACIENTES ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  DOMICILIO varchar(100) NOT NULL,  DNI varchar(100) NOT NULL,  FECHADEALTA varchar(100) NOT NULL  )[*]DROP TABLE IF EXISTS ODONTOLOGO; CREATE TABLE ODONTOLOGO ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  MATRICULA varchar(100) NOT NULL  )"
+Syntax error in SQL statement "CREATE TABLE PACIENTES ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  DOMICILIO varchar(100) NOT NULL,  DNI varchar(100) NOT NULL,  FECHADEALTA varchar(100) NOT NULL  )[*]DROP TABLE IF EXISTS ODONTOLOGO; CREATE TABLE ODONTOLOGO ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  MATRICULA varchar(100) NOT NULL  )"; SQL statement:
+CREATE TABLE PACIENTES ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  DOMICILIO varchar(100) NOT NULL,  DNI varchar(100) NOT NULL,  FECHADEALTA varchar(100) NOT NULL  )DROP TABLE IF EXISTS ODONTOLOGO; CREATE TABLE ODONTOLOGO ( ID INT PRIMARY KEY, APELLIDO varchar(100) NOT NULL,  NOMBRE varchar(100) NOT NULL,  MATRICULA varchar(100) NOT NULL  ) [42000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:247)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:898)
+	at org.h2.command.Parser.prepareCommand(Parser.java:572)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.command.CommandList.executeRemaining(CommandList.java:53)
+	at org.h2.command.CommandList.update(CommandList.java:66)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:61)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:07:24,528 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES ( ID, APELLIDO, NOMBRE,DOMICILIO, DNI, FECHADEALTA) VALUES (?,?,?,?,?,?) [42104-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8385)
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8369)
+	at org.h2.command.Parser.readTableOrView(Parser.java:8358)
+	at org.h2.command.Parser.readTableOrView(Parser.java:8328)
+	at org.h2.command.Parser.parseInsert(Parser.java:1632)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:81)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:11:00,558 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:11:00,559 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-02 23:11:00,860 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-02 23:12:10,633 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:12:10,635 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 23:12:10,834 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 23:12:10,837 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:12:10,838 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:12:10,856 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 23:12:10,857 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:79)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 23:12:10,857 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:96)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:12:15,421 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:12:15,422 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-02 23:12:15,595 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:35)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-02 23:12:15,597 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:12:15,597 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:67)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:36)
+ERROR   2022-11-02 23:12:15,612 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:78)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica1.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-02 23:12:15,612 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:79)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+ERROR   2022-11-02 23:12:15,612 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:96)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:37)
+INFO    2022-11-02 23:12:30,329 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:12:30,331 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-02 23:12:30,592 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-02 23:42:58,729 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-02 23:43:42,692 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-02 23:49:05,962 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-02 23:49:47,337 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-02 23:50:33,110 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-02 23:50:33,111 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-02 23:50:33,439 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-02 23:52:04,161 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-03 00:05:43,851 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 00:05:43,853 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 00:05:44,167 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-03 19:28:06,117 [main] main.MODEL.Pacientes  - El ID del Paciente   kerly santos fue creado con exito
+INFO    2022-11-03 19:35:14,305 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 19:35:14,306 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 19:35:14,629 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-03 19:45:17,042 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 19:45:17,043 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 19:45:17,383 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes Y odontologos.
+INFO    2022-11-03 20:06:24,994 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:06:24,997 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-03 20:06:25,214 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:44)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-03 20:06:25,218 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas pacientes  de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:45)
+ERROR   2022-11-03 20:06:25,219 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:69)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:45)
+ERROR   2022-11-03 20:06:25,243 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:80)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica2.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-03 20:06:25,245 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:81)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+ERROR   2022-11-03 20:06:25,246 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:98)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+INFO    2022-11-03 20:07:19,351 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:07:19,353 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 20:07:19,713 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-03 20:16:35,835 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:16:35,837 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 20:16:36,338 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-03 20:19:58,413 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:19:58,414 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+ERROR   2022-11-03 20:19:58,592 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.<init>(IDaoPacientesimplH2.java:17)
+	at main.SERVICE.ServicosPacientes.<init>(ServicosPacientes.java:12)
+	at main.main.main(main.java:44)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+INFO    2022-11-03 20:19:58,595 [main] main.DAO.imple.IDaoPacientesimplH2  - Error crear tablas pacientes  de la clinicaOdontologica
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:60)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:45)
+ERROR   2022-11-03 20:19:58,596 [main] main.DAO.imple.IDaoPacientesimplH2  - Close Connection Error
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.crearTabalaPacientes(IDaoPacientesimplH2.java:69)
+	at main.SERVICE.ServicosPacientes.crearTabalaPacientes(ServicosPacientes.java:15)
+	at main.main.main(main.java:45)
+ERROR   2022-11-03 20:19:58,611 [main] main.DAO.imple.IDaoPacientesimplH2  - Connection Error
+org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos puede que ya esté siendo utilizada: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.convertMVStoreException(Store.java:168)
+	at org.h2.mvstore.db.Store.<init>(Store.java:145)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at main.DAO.imple.IDaoPacientesimplH2.getConnection(IDaoPacientesimplH2.java:47)
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:80)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/Kerly Prieto/h2-database-ClinicaOdontologica3.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	... 13 more
+ERROR   2022-11-03 20:19:58,611 [main] main.DAO.imple.IDaoPacientesimplH2  - error al insertar paciente
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:81)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+ERROR   2022-11-03 20:19:58,611 [main] main.DAO.imple.IDaoPacientesimplH2  - error cerrar conexion 
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.connection" is null
+	at main.DAO.imple.IDaoPacientesimplH2.inserPacientes(IDaoPacientesimplH2.java:98)
+	at main.SERVICE.ServicosPacientes.inserPacientes(ServicosPacientes.java:19)
+	at main.main.main(main.java:46)
+INFO    2022-11-03 20:20:46,390 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:20:46,390 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 20:20:46,708 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-03 20:43:42,273 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-03 20:43:42,275 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-03 20:43:42,650 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
+INFO    2022-11-04 12:24:20,077 [main] main.MODEL.Pacientes  - El ID del Paciente   santos kerly fue creado con exito
+INFO    2022-11-04 12:24:20,079 [main] main.MODEL.Pacientes  - El ID del Paciente   santos nilka fue creado con exito
+INFO    2022-11-04 12:24:20,534 [main] main.DAO.imple.IDaoPacientesimplH2  - Se ha creado la tabla de pacientes.
