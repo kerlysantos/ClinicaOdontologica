@@ -1,5 +1,7 @@
-# ClinicaOdontologica
-proyecto final  Back End  I Spring Boot.
+# Clinica Odontologica
+proyecto final  Back End  I Spring Boot. 
+Sistema de reserva de turnos
+
 
 Back End I
 Trabajo integrador
